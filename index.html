@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Tutorial using html css</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="tabs">
+        <div class="buttons">
+            <button class="tab-1 active" onclick="makeActiveTab(1)">tab 1</button>
+            <button class="tab-2" onclick="makeActiveTab(2)">tab 2</button>
+            <button class="tab-3" onclick="makeActiveTab(3)">tab 3</button>
+            <button class="tab-4" onclick="makeActiveTab(4)">tab 4</button>
+        </div>
+        <div class="content">
+            <div class="inner content-1 active">
+                <h1>Albert Einstein</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, accusamus cupiditate! Repellat veniam vero id nisi velit, saepe illo reiciendis quas laboriosam sequi magnam maxime asperiores accusamus, molestias eum corporis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, accusamus cupiditate! Repellat veniam vero id nisi velit, saepe illo reiciendis quas laboriosam sequi magnam maxime asperiores accusamus, molestias eum corporis.
+                </p>
+            </div>
+            <div class="inner content-2">
+                <h1>Johny Vino</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, accusamus cupiditate! Repellat veniam vero id nisi velit, saepe illo reiciendis quas laboriosam sequi magnam maxime asperiores accusamus, molestias eum corporis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, accusamus cupiditate! Repellat veniam vero id nisi velit, saepe illo reiciendis quas laboriosam sequi magnam maxime asperiores accusamus, molestias eum corporis.
+                </p>
+            </div>
+            <div class="inner content-3">
+                <h1>Randy Ortan</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, accusamus cupiditate! Repellat veniam vero id nisi velit, saepe illo reiciendis quas laboriosam sequi magnam maxime asperiores accusamus, molestias eum corporis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, accusamus cupiditate! Repellat veniam vero id nisi velit, saepe illo reiciendis quas laboriosam sequi magnam maxime asperiores accusamus, molestias eum corporis.
+                </p>
+            </div>
+            <div class="inner content-4">
+                <h1>Jack Dro</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, accusamus cupiditate! Repellat veniam vero id nisi velit, saepe illo reiciendis quas laboriosam sequi magnam maxime asperiores accusamus, molestias eum corporis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, accusamus cupiditate! Repellat veniam vero id nisi velit, saepe illo reiciendis quas laboriosam sequi magnam maxime asperiores accusamus, molestias eum corporis.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function makeActiveTab(num) {
+            $('.buttons button').removeClass('active');
+            $('.buttons .tab-'+num).addClass('active');
+
+            $('.inner').removeClass('active');
+            $('.tabs .content-'+num).addClass('active');
+        }
+    </script>
+</body>
+</html>
